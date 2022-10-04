@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Juego del ahorcado</title>
+    <script src="scripts/motor.js"></script>
+    <script src="https://kit.fontawesome.com/cfbbd3b798.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container_principal">
+            <div id="container_menu">
+                <div id="titulo">JUEGO DEL AHORCADO</div>
+                <button class="boton_jugar" value="jugar" onclick="jugar()">Iniciar juego</button><br>
+                <button class="boton_jugar" value="agregar" onclick="agregar()">Agregar nueva palabra</button>
+                <br><div id="calavera"><i class="fa-sharp fa-solid fa-skull-crossbones fa-10x" style="color:cyan;"></i></div>
+            </div>
+            <div id="container_juego">
+                <canvas id="canvas" width="595" height="690"></canvas>
+                <div id="interaccion">
+                    <div id="container_letras">
+                        <button class="boton_letra" onclick="probarLetra('a')">A</button>
+                        <button class="boton_letra" onclick="probarLetra('b')">B</button>
+                        <button class="boton_letra" onclick="probarLetra('c')">C</button>
+                        <button class="boton_letra" onclick="probarLetra('d')">D</button>
+                        <button class="boton_letra" onclick="probarLetra('e')">E</button>
+                        <button class="boton_letra" onclick="probarLetra('f')">F</button>
+                        <button class="boton_letra" onclick="probarLetra('g')">G</button>
+                        <button class="boton_letra" onclick="probarLetra('h')">H</button>
+                        <button class="boton_letra" onclick="probarLetra('i')">I</button>
+                        <button class="boton_letra" onclick="probarLetra('j')">J</button>
+                        <button class="boton_letra" onclick="probarLetra('k')">K</button>
+                        <button class="boton_letra" onclick="probarLetra('l')">L</button>
+                        <button class="boton_letra" onclick="probarLetra('m')">M</button>
+                        <button class="boton_letra" onclick="probarLetra('n')">N</button>
+                        <button class="boton_letra" onclick="probarLetra('ñ')">Ñ</button>
+                        <button class="boton_letra" onclick="probarLetra('o')">O</button>
+                        <button class="boton_letra" onclick="probarLetra('p')">P</button>
+                        <button class="boton_letra" onclick="probarLetra('q')">Q</button>
+                        <button class="boton_letra" onclick="probarLetra('r')">R</button>
+                        <button class="boton_letra" onclick="probarLetra('s')">S</button>
+                        <button class="boton_letra" onclick="probarLetra('t')">T</button>
+                        <button class="boton_letra" onclick="probarLetra('u')">U</button>
+                        <button class="boton_letra" onclick="probarLetra('v')">V</button>
+                        <button class="boton_letra" onclick="probarLetra('w')">W</button>
+                        <button class="boton_letra" onclick="probarLetra('x')">X</button>
+                        <button class="boton_letra" onclick="probarLetra('y')">Y</button>
+                        <button class="boton_letra" onclick="probarLetra('z')">Z</button>
+                    </div>
+                    <div id="container_botones_juego">
+                        <button class="botones_juego" value="volver" onclick="volverDesdeJuego()">Volver</button>
+                        <button class="botones_juego" value="new game" onclick="nuevoJuego()">Nuevo juego</button>
+                    </div>
+                </div>
+            </div>
+            <div id="container_nueva_palabra">
+                <textarea placeholder="Ingrese una palabra" id="textarea"></textarea>
+                <br><i class="fa-solid fa-triangle-exclamation" style="color: cyan;" id="icono_advertencia"></i>
+                <div id="advertencia">Máximo de 14 letras, no se permiten carácteres especiales, números ni letras con acento.</div>
+                <br>
+                <div class="botones">
+                    <button id="boton_volver" value="volver" onclick="volverDesdeNuevaPalabra()">Volver al menu</button>
+                    <button id="boton_agregar" value="agregar" onclick="crearPalabra()">Agregar palabra y jugar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container_footer">
+            <div class="footer_texto">
+                Juego del ahorcado creado por Matías Adorno<br><br><br>
+                Challenge del Programa ONE (de Alura LATAM y Oracle)<br><br><br>
+            </div>
+            <div class="footer_imagenes">
+                <a href="https://github.com/Matokuun" style="padding-right: 10px;"><i class="fa-brands fa-github fa-2xl" style="color:black;"></i></a>
+                <a href="https://www.linkedin.com/in/mat%C3%ADas-alfredo-adorno/"><i class="fa-brands fa-linkedin fa-2xl" style="color: black;"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

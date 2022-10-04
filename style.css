@@ -1,0 +1,594 @@
+body{
+    font-family: 'Cairo', sans-serif;
+}
+button{
+    font-family: 'Cairo', sans-serif;
+}
+.container_principal{
+    width: 100%;
+    height:1000px;
+    background-color: black;
+}
+#container_menu{
+    /*CAMBIAR*/
+    text-align: center;
+    display: block;
+}
+#titulo{
+    color: cyan;
+    font-size: 50px;
+    padding: 30px 0;
+}
+.boton_jugar{
+    background-color: aqua;
+    width: 25%;
+    height: 190px;
+    padding: 10px 40px;
+    font-size: 35px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+#calavera{
+    margin-top: 100px;
+}
+.boton_jugar:hover{
+    background-color: rgb(4, 204, 204);
+    cursor: pointer;
+}
+.boton_jugar:active{
+    background-color: rgb(2, 78, 78);
+}
+#container_juego{
+    /*CAMBIAR*/
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 1200px;
+    height: 700px;
+    border: 5px dashed cyan;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 150px;
+}
+#canvas{
+    width: 595px;
+    height:690px;
+    display: inline;
+}
+#interaccion{
+    float: right;
+    width: 595px;
+    height:690px;
+    display: inline;
+}
+#container_letras{
+    display: block;
+    width: 595px;
+    height: 445px;
+}
+.boton_letra{
+    display: inline;
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin: 20px;
+    font-size: 25px;
+}
+.boton_letra:hover{
+    background-color: rgb(4, 204, 204);
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    margin: 14.6px;
+    cursor: pointer;
+}
+.boton_letra:active{
+    background-color: rgb(2, 78, 78);
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+}
+#container_botones_juego{
+    display: block;
+    width: 595px;
+    height: 245px;
+    text-align: center;
+}
+.botones_juego{
+    background-color: cyan;
+    width: 35%;
+    font-size: 25px;
+    border-radius: 20px;
+    height: 100px;
+    margin: 72.5px 20px;
+    cursor: pointer;
+}
+.botones_juego:hover{
+    background-color: rgb(4, 204, 204);
+}
+.botones_juego:active{
+    background-color: rgb(2, 78, 78);
+}
+#container_nueva_palabra{
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    height: 700px;
+    width: 1000px;
+    border: 5px dashed cyan;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 150px;
+}
+#textarea{
+    box-sizing: border-box;
+    width: 1000px;
+    height: 400px;
+    background-color: black;
+    color: cyan;
+    padding: 20px;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+#icono_advertencia{
+    display: inline;
+    padding-left: 5px;
+}
+#advertencia{
+    color:aqua;
+    display: inline;
+}
+.botones{
+    text-align: center;
+    margin-top: 100px;
+    height: 200px;
+    width: 1000px;
+}
+#boton_volver{
+    background-color: cyan;
+    width: 35%;
+    font-size: 25px;
+    border-radius: 20px;
+    height: 100px;
+    margin: 0 20px;
+}
+#boton_agregar{
+    background-color: cyan;
+    width: 35%;
+    font-size: 25px;
+    border-radius: 20px;
+    height: 100px;
+    margin: 0 20px;
+}
+#boton_volver:hover{
+    background-color: rgb(4, 204, 204);
+    cursor: pointer;
+}
+#boton_agregar:hover{
+    background-color: rgb(4, 204, 204);
+    cursor: pointer;
+}
+#boton_volver:active{
+    background-color: rgb(2, 78, 78);
+}
+#boton_agregar:active{
+    background-color: rgb(2, 78, 78);
+}
+.container_footer{
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(black,rgb(73, 166, 197),lightblue);
+}
+.footer_texto{
+    text-align: center;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding-top: 150px;
+    padding-bottom: 10px;
+}
+.footer_imagenes{
+    text-align: center;
+    height: 35px;   
+}
+/*TABLET*/
+@media screen and (max-width: 1200px) {
+    .container_principal{
+        width: 100%;
+        height:1000px;
+        background-color: black;
+    }
+    .boton_jugar{
+        background-color: aqua;
+        width: 50%;
+        height: 125px;
+        padding: 10px 20px;
+        font-size: 25px;
+        margin-top: 50px;
+        border-radius: 20px;
+    }
+    #container_nueva_palabra{
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        height: 700px;
+        width: 750px;
+        border: 5px dashed cyan;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 150px;
+    }
+    #textarea{
+        box-sizing: border-box;
+        width: 750px;
+        height: 400px;
+        background-color: black;
+        color: cyan;
+        padding: 20px;
+        font-size: 40px;
+        border: none;
+        outline: none;
+        resize: none;
+    }
+    #icono_advertencia{
+        display: inline;
+        padding-left: 5px;
+    }
+    #advertencia{
+        color:aqua;
+        display: inline;
+        font-size: 20px;
+    }
+    .botones{
+        text-align: center;
+        margin-top: 100px;
+        height: 200px;
+        width: 750px;
+    }
+    #boton_volver{
+        background-color: cyan;
+        width: 35%;
+        font-size: 25px;
+        border-radius: 20px;
+        height: 100px;
+        margin: 0 20px;
+    }
+    #boton_agregar{
+        background-color: cyan;
+        width: 35%;
+        font-size: 25px;
+        border-radius: 20px;
+        height: 100px;
+        margin: 0 20px;
+    }
+    #container_juego{
+        /*CAMBIAR*/
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        margin-top: 100px;
+        width: 600px;
+        height: 900px;
+        border: 5px dashed cyan;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    #canvas{
+        width: 590px;
+        height: 600px;
+        display: block;
+    }
+    #interaccion{
+        float: right;
+        width: 590px;
+        height: 400px;
+        display: block;
+    }
+    #container_letras{
+        display: block;
+        width: 590px;
+        height: 175px;
+    }
+    .boton_letra{
+        display: inline;
+        background-color: aqua;
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        margin: 10px 0px 10px 25px;
+        font-size: 15px;
+    }
+    .boton_letra:hover{
+        background-color: rgb(4, 204, 204);
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        margin: 10px 0px 10px 25px;
+        font-size: 15px;
+    }
+    .boton_letra:active{
+        background-color: rgb(2, 78, 78);
+    }
+    #container_botones_juego{
+        display: block;
+        width: 590px;
+        height: 225px;
+        text-align: center;
+    }
+    .botones_juego{
+        background-color: cyan;
+        width: 85%;
+        font-size: 20px;
+        border-radius: 20px;
+        height: 40px;
+        margin: 10px auto;
+        cursor: pointer;
+        display: block;
+    }
+}
+/*CELU*/
+@media screen and (max-width: 767px){
+    .container_principal{
+        width: 100%;
+        height:1500px;
+        background-color: black;
+    }
+    .boton_jugar{
+        background-color: aqua;
+        width: 50%;
+        height: 175px;
+        padding: 10px 20px;
+        font-size: 25px;
+        margin-top: 50px;
+        border-radius: 20px;
+    }
+    #container_nueva_palabra{
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        height: 700px;
+        width: 350px;
+        border: 5px dashed cyan;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    #textarea{
+        box-sizing: border-box;
+        width: 350px;
+        height: 400px;
+        background-color: black;
+        color: cyan;
+        padding: 20px;
+        font-size: 40px;
+        border: none;
+        outline: none;
+        resize: none;
+    }
+    #icono_advertencia{
+        display: inline;
+        padding-left: 5px;
+    }
+    #advertencia{
+        color:aqua;
+        display: inline;
+    }
+    .botones{
+        text-align: center;
+        margin-top: 40px;
+        height: 200px;
+        width: 350px;
+        box-sizing: border-box;
+    }
+    #boton_volver{
+        background-color: cyan;
+        width: 150px;
+        font-size: 17px;
+        border-radius: 20px;
+        height: 75px;
+        margin: 10px 20px;
+    }
+    #boton_agregar{
+        background-color: cyan;
+        width: 150px;
+        font-size: 17px;
+        border-radius: 20px;
+        height: 75px;
+        margin: 10px 20px;
+    }
+    #container_juego{
+        /*CAMBIAR*/
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        margin-top: 100px;
+        width: 350px;
+        height: 1250px;
+        border: 5px dashed cyan;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    #canvas{
+        width: 340px;
+        height: 600px;
+        display: block;
+    }
+    #interaccion{
+        float: right;
+        width: 340px;
+        height:600px;
+        display: block;
+    }
+    #container_letras{
+        display: block;
+        width: 340px;
+        height: 400px;
+    }
+    .boton_letra{
+        display: inline;
+        background-color: aqua;
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        margin: 10px 0px 10px 25px;
+        font-size: 15px;
+    }
+    .boton_letra:hover{
+        background-color: rgb(4, 204, 204);
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        margin: 10px 0px 10px 25px;
+        font-size: 15px;
+    }
+    .boton_letra:active{
+        background-color: rgb(2, 78, 78);
+    }
+    #container_botones_juego{
+        display: block;
+        width: 340px;
+        height: 200px;
+        text-align: center;
+    }
+    .botones_juego{
+        background-color: cyan;
+        width: 85%;
+        font-size: 25px;
+        border-radius: 20px;
+        height: 75px;
+        margin: 20px auto;
+        cursor: pointer;
+        display: block;
+    }
+}
+/*CELU ANGOSTO*/
+@media screen and (max-width: 300px){
+    #container_nueva_palabra{
+        display: none;
+        position: absolute;
+        bottom: 0px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        height: 700px;
+        width: 270px;
+        border: 5px dashed cyan;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    #textarea{
+        box-sizing: border-box;
+        width: 270px;
+        height: 400px;
+        background-color: black;
+        color: cyan;
+        padding: 20px;
+        font-size: 40px;
+        border: none;
+        outline: none;
+        resize: none;
+    }
+    .botones{
+        text-align: center;
+        margin-top: 40px;
+        height: 200px;
+        width: 270px;
+        box-sizing: border-box;
+    }
+    #container_juego{
+        /*CAMBIAR*/
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        margin-top: 100px;
+        width: 270px;
+        height: 1250px;
+        border: 5px dashed cyan;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    #canvas{
+        width: 260px;
+        height: 600px;
+        display: block;
+    }
+    #interaccion{
+        float: right;
+        width: 260px;
+        height:600px;
+        display: block;
+    }
+    #container_letras{
+        display: block;
+        width: 260px;
+        height: 400px;
+    }
+    .boton_letra{
+        display: inline;
+        background-color: aqua;
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        margin: 10px 0px 10px 25px;
+        font-size: 15px;
+    }
+    .boton_letra:hover{
+        background-color: rgb(4, 204, 204);
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        margin: 10px 0px 10px 25px;
+        font-size: 15px;
+    }
+    .boton_letra:active{
+        background-color: rgb(2, 78, 78);
+    }
+    #container_botones_juego{
+        display: block;
+        width: 260px;
+        height: 200px;
+        text-align: center;
+    }
+    .botones_juego{
+        background-color: cyan;
+        width: 85%;
+        font-size: 25px;
+        border-radius: 20px;
+        height: 75px;
+        margin: 20px auto;
+        cursor: pointer;
+        display: block;
+    }
+}
