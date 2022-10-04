@@ -1,5 +1,6 @@
 var palabras= ["boca juniors", "river plate","estudiantes","independiente","racing","talleres","gimnasia","san lorenzo","real madrid","ocelote","elefante","thor","redes","patronato","equipo","cuarteto","belgrano","audi","bmw","helado","supervivencia","celular","pizarra","resto","ahorcado","cafe","montaña","playa","zorro","mouse","transparente","esdrujula","caballeria","chimpance","taquicardia","alfabeto","idioma","previsional","procesal","argentina","la plata","practica","bendicion","energia","campanas","rosario","inolvidable","asterisco","neuralgia","instituto","estadistica","impresora","antropologia","insectos","marketing","azufre","sentimiento","promocion","youtube","facebook"] //60 palabras
 var caracteres_prohibidos= ['°','|','#','$','%','&','/','(',')','=','?','¡','¿',',','.','-','{','}','[',']','+','!','*','/','+','-','_',':',';','¨','*','"',"'",'á','é','í','ó','ú','Á','É','Í','Ó','Ú','\n']
+var letras=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z']
 var cantidadPalabras=60
 var errores
 var acertadas
@@ -123,7 +124,7 @@ function probarLetra(letra){
                 if(acertadas==palabraElegida.length){
                     pincel.fillStyle= "green"
                     pincel.textAlign= "center"
-                    pincel.font= "25px sans-serif"
+                    pincel.font= "40px sans-serif"
                     pincel.fillText("GANASTE!", 297, 50)
                     gano=true
                     window.removeEventListener(`keyup`, capturarComprobar);
@@ -202,6 +203,7 @@ function nuevoJuego(){
     borrar()
     dibujar(palabraElegida)
     window.addEventListener(`keyup`, capturarComprobar);
+    window.scroll(0, 0)
 }
 //FUNCION PARA JUGAR DESDE MENU PRINCIPAL
 function jugar(){
@@ -239,14 +241,13 @@ function crearPalabra(){
         palabras.push(texto.toLowerCase());
         console.log("Palabra creada: ", texto, "!")
         cantidadPalabras++
-        var numero = Math.round(Math.random()*100) % cantidadPalabras
         nuevoJuego()
         document.querySelector('textarea').value= ""
     }
 }
 function capturarComprobar(teclaPresionada) {
     var tecla = (teclaPresionada.key).toLowerCase();
-    if (((teclaPresionada.key).charCodeAt(0) >= 65 && (teclaPresionada.key).charCodeAt(0) <= 90) || ((teclaPresionada.key).charCodeAt(0) >= 97 && (teclaPresionada.key).charCodeAt(0) <= 122) || ((teclaPresionada.key).charCodeAt(0) == 209) || ((teclaPresionada.key).charCodeAt(0) == 241)) {
+    if (letras.includes(tecla)) {
         probarLetra(tecla)
     }
 }

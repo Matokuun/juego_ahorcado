@@ -27,6 +27,8 @@ button{
     font-size: 35px;
     margin-top: 50px;
     border-radius: 20px;
+    border-style: solid;
+    border-color: black;
 }
 #calavera{
     margin-top: 100px;
@@ -78,6 +80,9 @@ button{
     border-radius: 15px;
     margin: 20px;
     font-size: 25px;
+    border-style: solid;
+    border-color: black;
+    font-weight: bolder;
 }
 .boton_letra:hover{
     background-color: rgb(4, 204, 204);
@@ -86,12 +91,16 @@ button{
     font-size: 30px;
     margin: 14.6px;
     cursor: pointer;
+    border-style: solid;
+    border-color: black;
 }
 .boton_letra:active{
     background-color: rgb(2, 78, 78);
     width: 60px;
     height: 60px;
     font-size: 30px;
+    border-style: solid;
+    border-color: black;
 }
 #container_botones_juego{
     display: block;
@@ -107,6 +116,8 @@ button{
     height: 100px;
     margin: 72.5px 20px;
     cursor: pointer;
+    border-style: solid;
+    border-color: black;
 }
 .botones_juego:hover{
     background-color: rgb(4, 204, 204);
@@ -162,6 +173,8 @@ button{
     border-radius: 20px;
     height: 100px;
     margin: 0 20px;
+    border-style: solid;
+    border-color: black;
 }
 #boton_agregar{
     background-color: cyan;
@@ -170,6 +183,8 @@ button{
     border-radius: 20px;
     height: 100px;
     margin: 0 20px;
+    border-style: solid;
+    border-color: black;
 }
 #boton_volver:hover{
     background-color: rgb(4, 204, 204);
@@ -216,6 +231,8 @@ button{
         font-size: 25px;
         margin-top: 50px;
         border-radius: 20px;
+        border-style: solid;
+        border-color: black;
     }
     #container_nueva_palabra{
         display: none;
@@ -266,6 +283,8 @@ button{
         border-radius: 20px;
         height: 100px;
         margin: 0 20px;
+        border-style: solid;
+        border-color: black;
     }
     #boton_agregar{
         background-color: cyan;
@@ -274,6 +293,8 @@ button{
         border-radius: 20px;
         height: 100px;
         margin: 0 20px;
+        border-style: solid;
+        border-color: black;
     }
     #container_juego{
         /*CAMBIAR*/
@@ -284,7 +305,7 @@ button{
         bottom: 0;
         left: 0;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 50px;
         width: 600px;
         height: 900px;
         border: 5px dashed cyan;
@@ -315,6 +336,9 @@ button{
         border-radius: 10px;
         margin: 10px 0px 10px 25px;
         font-size: 15px;
+        border-style: solid;
+        border-color: black;
+        font-weight: bolder;
     }
     .boton_letra:hover{
         background-color: rgb(4, 204, 204);
@@ -323,6 +347,8 @@ button{
         border-radius: 10px;
         margin: 10px 0px 10px 25px;
         font-size: 15px;
+        border-style: solid;
+        border-color: black;
     }
     .boton_letra:active{
         background-color: rgb(2, 78, 78);
@@ -342,6 +368,8 @@ button{
         margin: 10px auto;
         cursor: pointer;
         display: block;
+        border-style: solid;
+        border-color: black;
     }
 }
 /*CELU*/
@@ -359,6 +387,8 @@ button{
         font-size: 25px;
         margin-top: 50px;
         border-radius: 20px;
+        border-style: solid;
+        border-color: black;
     }
     #container_nueva_palabra{
         display: none;
@@ -409,6 +439,8 @@ button{
         border-radius: 20px;
         height: 75px;
         margin: 10px 20px;
+        border-style: solid;
+        border-color: black;
     }
     #boton_agregar{
         background-color: cyan;
@@ -417,6 +449,8 @@ button{
         border-radius: 20px;
         height: 75px;
         margin: 10px 20px;
+        border-style: solid;
+        border-color: black;
     }
     #container_juego{
         /*CAMBIAR*/
@@ -427,7 +461,7 @@ button{
         bottom: 0;
         left: 0;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 15px;
         width: 350px;
         height: 1250px;
         border: 5px dashed cyan;
@@ -436,13 +470,13 @@ button{
     }
     #canvas{
         width: 340px;
-        height: 600px;
+        height: 500px;
         display: block;
     }
     #interaccion{
         float: right;
         width: 340px;
-        height:600px;
+        height:700px;
         display: block;
     }
     #container_letras{
@@ -458,6 +492,9 @@ button{
         border-radius: 10px;
         margin: 10px 0px 10px 25px;
         font-size: 15px;
+        border-style: solid;
+        border-color: black;
+        font-weight: bolder;
     }
     .boton_letra:hover{
         background-color: rgb(4, 204, 204);
@@ -466,6 +503,8 @@ button{
         border-radius: 10px;
         margin: 10px 0px 10px 25px;
         font-size: 15px;
+        border-style: solid;
+        border-color: black;
     }
     .boton_letra:active{
         background-color: rgb(2, 78, 78);
@@ -485,10 +524,89 @@ button{
         margin: 20px auto;
         cursor: pointer;
         display: block;
+        border-style: solid;
+        border-color: black;
+    }
+}
+@media screen and (max-height: 843px) and (max-width: 767px){
+    #container_juego{
+        /*CAMBIAR*/
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        margin-top: 15px;
+        width: 350px;
+        height: 900px;
+        border: 5px dashed cyan;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    #canvas{
+        width: 340px;
+        height: 325px;
+        display: block;
+    }
+    #interaccion{
+        float: right;
+        width: 340px;
+        height: 575px;
+        display: block;
+    }
+    #container_letras{
+        display: block;
+        width: 340px;
+        height: 300px;
+    }
+    .boton_letra{
+        display: inline;
+        background-color: aqua;
+        width: 27px;
+        height: 27px;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: black;
+        font-weight: bolder;
+        margin: 10px 0px 10px 25px;
+        font-size: 10px;
+    }
+    .boton_letra:hover{
+        background-color: rgb(4, 204, 204);
+        width: 27px;
+        height: 27px;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: black;
+        margin: 10px 0px 10px 25px;
+        font-size: 10px;
+    }
+    .boton_letra:active{
+        background-color: rgb(2, 78, 78);
+    }
+    #container_botones_juego{
+        display: block;
+        width: 340px;
+        height: 275px;
+        text-align: center;
+    }
+    .botones_juego{
+        background-color: cyan;
+        width: 85%;
+        font-size: 25px;
+        border-radius: 20px;
+        height: 75px;
+        margin: 10px auto;
+        cursor: pointer;
+        display: block;
+        border-style: solid;
+        border-color: black;
     }
 }
 /*CELU ANGOSTO*/
-@media screen and (max-width: 300px){
+@media screen and (max-width: 300px) {
     #container_nueva_palabra{
         display: none;
         position: absolute;
@@ -532,22 +650,22 @@ button{
         bottom: 0;
         left: 0;
         margin: auto;
-        margin-top: 100px;
+        margin-top: 10px;
         width: 270px;
-        height: 1250px;
+        height: 1000px;
         border: 5px dashed cyan;
         border-radius: 10px;
         box-sizing: border-box;
     }
     #canvas{
         width: 260px;
-        height: 600px;
+        height: 325px;
         display: block;
     }
     #interaccion{
         float: right;
         width: 260px;
-        height:600px;
+        height: 675px;
         display: block;
     }
     #container_letras{
@@ -558,19 +676,24 @@ button{
     .boton_letra{
         display: inline;
         background-color: aqua;
-        width: 35px;
-        height: 35px;
+        width: 27px;
+        height: 27px;
         border-radius: 10px;
+        border-style: solid;
+        border-color: black;
+        font-weight: bolder;
         margin: 10px 0px 10px 25px;
-        font-size: 15px;
+        font-size: 10px;
     }
     .boton_letra:hover{
         background-color: rgb(4, 204, 204);
-        width: 35px;
-        height: 35px;
+        width: 27px;
+        height: 27px;
         border-radius: 10px;
+        border-style: solid;
+        border-color: black;
         margin: 10px 0px 10px 25px;
-        font-size: 15px;
+        font-size: 10px;
     }
     .boton_letra:active{
         background-color: rgb(2, 78, 78);
@@ -578,7 +701,7 @@ button{
     #container_botones_juego{
         display: block;
         width: 260px;
-        height: 200px;
+        height: 275px;
         text-align: center;
     }
     .botones_juego{
@@ -587,8 +710,10 @@ button{
         font-size: 25px;
         border-radius: 20px;
         height: 75px;
-        margin: 20px auto;
+        margin: 10px auto;
         cursor: pointer;
         display: block;
+        border-style: solid;
+        border-color: black;
     }
 }
